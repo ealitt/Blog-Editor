@@ -30,10 +30,15 @@ const editor = new EditorJS({
 
 let saveBtn = document.querySelector('button');
 
-saveBtn.addEventListener('click', function() {
+saveBtn.addEventListener('click', function(saveBtn) {
     editor.save().then((outputData) => {
-        console.log('Outputing Blog Data: ', outputData)
+        let fileBlob = new Blob([JSON.stringify(outputData, null, 1)], {type: "application/json"});
+        saveAs(fileBlob, "content.json")
     }).catch((error) => {
         console.log('Save failed: ', error)
     }); 
 })
+
+window.onbeforeunload = function(event) {
+    event.returnValue = "REFRESHING WILL LOSE YOUR DATA";
+};
