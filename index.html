@@ -5,15 +5,26 @@
     <title>Blog Editor</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@material-ui-next"></script>
+
+    <script src="js/simple-image.js"></script>
+    <link href="js/simple-image.css" rel="stylesheet"/>
+
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/FileSaver.js"></script>
 </head>
 <body>
-    <h1>Content</h1>
-    <div id="editorjs"></div>
-    <button download=''>Save JSON</button>
+    <div id="title">
+        <h1>Souzou Maker Blog Editor</h1>
+    </div>
+    <div id="doc">
+        <div id="editorjs"></div>
+        <button id="download" download=''>Save JSON</button>
+    </div>
 </body>
 </html>

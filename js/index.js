@@ -1,6 +1,8 @@
 const editor = new EditorJS({
     holderId: 'editorjs',
 
+    autofocus: true,
+    
     tools: {
         header: {
             class: Header,
@@ -15,16 +17,29 @@ const editor = new EditorJS({
             ]
         },
 
+        delimiter: Delimiter,
+
+        image: {
+            class: SimpleImage,
+            inlineToolbar: true,
+            config: {
+              placeholder: 'Paste image URL'
+            }
+        },
+
         embed: {
             class: Embed,
-            inlineToolbar: false,
+            inlineToolbar: true,
             config: {
                 services: {
                     youtube: true,
                     coub: true
                 }
             },
-        }
+        },
+
+        raw: RawTool,
+
     }
 });
 
